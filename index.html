@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Fake Name Generator</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 162vh;
+    color: #fff;
+}
+a{background: linear-gradient(to right, #800080, #ee82ee, #ffc0cb);
+color: greenyellow;
+}
+header, footer {
+    background:linear-gradient(90deg, #ff7e5f, #feb47b, #ffcc33);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    max-width: 300px;
+    position: relative;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+h1, h2, p {
+    color: #fff;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #e68900;
+}
+.selector {
+    margin: 10px 0;
+    color: #fff;
+}
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+.copy-button:hover {
+    background-color: #e68900;
+}
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-box {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.sub-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pro Fake Name Generator</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+             <h4>Keep using this site for more updates<br> on Y.F.S</h4>
+             <a href="https://game-ali.github.io/race/RG/index.html">play game if you are bored</a>
+            <h2>Your Options</h2>
+            <div class="selector">
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="gh">Finland</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="cn">China</option>
+                    <option value="jp">Japan</option>
+                    <option value="ng">Australia</option>
+                    <option value="za">Denmark</option>
+                    <!-- Add more popular countries as needed -->
+                </select>
+            </div>
+            <div class="selector">
+                <label for="ageRange">Age Range:</label>
+                <select id="ageRange">
+                    <option value="0-18">0-18</option>
+                    <option value="19-35">19-35</option>
+                    <option value="36-60">36-60</option>
+                    <option value="60+">60+</option>
+                </select>
+            </div>
+            <div class="selector">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="random">----</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="selector">
+                <label for="nameSet">Name set:</label>
+                <select id="nameSet">
+                    <option value="american">American</option>
+                    <option value="hispanic">Croatian</option>
+                     <option value="hispanic">England</option>
+                      <option value="hispanic">Danish</option>
+                       <option value="hispanic">Australian</option>
+                        <option value="hispanic">German</option>
+                         <option value="hispanic">Greenland</option>
+                          <option value="hispanic">French</option>
+                    <!-- Add more name sets as needed -->
+                </select>
+            </div>
+            <button onclick="generateIdentity()">Generate New Identity</button>
+        </div>
+        <div class="card">
+            <h2>Your Randomly Generated Identity</h2>
+            <div class="main-box">Name:
+                <div id="fullName" class="sub-box"> Make Money Ali</div>
+                <button class="copy-button" onclick="copyToClipboard()">Copy Name</button>
+            </div>
+            <div class="details-container">
+                <p id="address">Address: 3148 Jadewood Farms, East Orange, NJ 07017</p>
+                <p id="motherMaidenName">Mother's maiden name: McCormack</p>
+                <p id="ssn">SSN: 158-94-XXXX</p>
+                <p id="geoCoordinates">Geo coordinates: 40.752877, -74.215049</p>
+                <p id="phone">Phone: 973-395-5179</p>
+                <p id="birthday">Birthday: March 2, 1962</p>
+                <p id="age">Age: 62 years old</p>
+                <p id="zodiac">Tropical zodiac: Pisces</p>
+                <p id="email">Email Address: example@example.com</p>
+                <p id="username">Username: Caggrable</p>
+                <p id="password">Password: waiQuei0M</p>
+                <p id="website">Website: petvia.com</p>
+                <p id="browserAgent">Browser user agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko</p>
+                <p id="visa">Visa: 4556 9065 2696 3184</p>
+                <p id="expires">Expires: 10/2027</p>
+                <p id="cvv2">CVV2: 906</p>
+                <p id="company">Company: The White Swan</p>
+                <p id="occupation">Occupation: Enrollment specialist</p>
+                <p id="height">Height: 5' 8" (172 centimeters)</p>
+                <p id="weight">Weight: 229.0 pounds (104.1 kilograms)</p>
+                <p id="bloodType">Blood type: AB+</p>
+                <p id="ups">UPS tracking number: 1Z 7F4 012 40 7636 117 9</p>
+                <p id="westernUnion">Western Union MTCN: 3468996120</p>
+                <p id="moneyGram">MoneyGram MTCN: 61768676</p>
+                <p id="favoriteColor">Favorite color: Purple</p>
+                <p id="vehicle">Vehicle: 2000 Chevrolet Tracker</p>
+                <p id="guid">GUID: e04b9b71-52a9-4ca7-899e-656a9db5a060</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <p>YOUR FININANCIAL SUCCESS<br>&copy; 2025 Pro Fake Name Generator. All rights reserved.</p>
+    </footer>
+    <script>
+        const namesByCountry = {
+    us: {
+        male: [
+            "John Doe", "Bob Brown", "Michael Smith", "James Johnson", "Robert Miller", 
+            "William Davis", "David Garcia", "Richard Martinez", "Charles Wilson", "Joseph Anderson",
+            "Thomas Taylor", "Christopher Thomas", "Daniel Jackson", "Matthew White", "Anthony Harris",
+            "Mark Martin", "Donald Thompson", "Steven Robinson", "Paul Clark", "Andrew Lewis",
+            "Joshua Lee", "Kenneth Walker", "Kevin Hall", "Brian Allen", "George Young",
+            "Edward King", "Ronald Wright", "Timothy Scott", "Jason Green", "Jeffrey Adams"
+        ],
+        female: [
+            "Jane Doe", "Alice Johnson", "Mary Smith", "Patricia Brown", "Linda Miller",
+            "Barbara Davis", "Elizabeth Garcia", "Jennifer Martinez", "Maria Wilson", "Susan Anderson",
+            "Margaret Taylor", "Dorothy Thomas", "Lisa Jackson", "Nancy White", "Karen Harris",
+            "Betty Martin", "Helen Thompson", "Sandra Robinson", "Donna Clark", "Carol Lewis",
+            "Ruth Lee", "Sharon Walker", "Michelle Hall", "Laura Allen", "Sarah Young",
+            "Kimberly King", "Deborah Wright", "Jessica Scott", "Shirley Green", "Cynthia Adams"
+        ]
+    },
+    uk: {
+        male: [
+            "James Smith", "Michael Brown", "Peter Johnson", "David Taylor", "Paul White",
+            "Mark Harris", "John Lewis", "Andrew Walker", "William Hall", "Thomas Allen",
+            "Charles Young", "Edward King", "Christopher Wright", "Matthew Scott", "Anthony Green",
+            "Nicholas Adams", "George Baker", "Joseph Carter", "Daniel Cook", "Benjamin Turner",
+            "Samuel Phillips", "Oliver Roberts", "Henry Collins", "Alexander Edwards", "Patrick Hughes",
+            "Adam Morgan", "Simon Ward", "Jason Cox", "Robert Perry", "Stephen Butler"
+        ],
+        female: [
+            "Emily Johnson", "Sarah Davis", "Anna Brown", "Susan Smith", "Jessica Taylor",
+            "Karen White", "Helen Harris", "Laura Lewis", "Michelle Walker", "Rebecca Hall",
+            "Ruth Allen", "Deborah Young", "Sharon King", "Linda Wright", "Emma Scott",
+            "Catherine Green", "Margaret Adams", "Jane Baker", "Samantha Carter", "Chloe Cook",
+            "Victoria Turner", "Hannah Phillips", "Charlotte Roberts", "Amy Collins", "Rachel Edwards",
+            "Claire Hughes", "Amanda Morgan", "Melissa Ward", "Christine Cox", "Angela Perry"
+        ]
+    },
+    ca: {
+        male: [
+            "Daniel Wilson", "Victoria Martin", "Matthew Lee", "Sophia Thompson", "Isaac Moore",
+            "John Young", "James Brown", "William Johnson", "David White", "Richard Green",
+            "Joseph Harris", "Charles Lewis", "Thomas Walker", "Christopher Hall", "Andrew Allen",
+            "Joshua Scott", "Nicholas Wright", "Ryan King", "Nathan Adams", "Tyler Baker",
+            "Brandon Carter", "Justin Cook", "Benjamin Turner", "Jonathan Phillips", "Jacob Roberts",
+            "Samuel Collins", "Ethan Edwards", "Alexander Hughes", "Christian Morgan", "Logan Ward"
+        ],
+        female: [
+            "Sophia Thompson", "Emma Martin", "Olivia Lee", "Ava Brown", "Isabella Wilson",
+            "Mia Johnson", "Charlotte Lewis", "Amelia Walker", "Harper Hall", "Evelyn Allen",
+            "Abigail Scott", "Emily Wright", "Elizabeth King", "Mila Adams", "Ella Baker",
+            "Avery Carter", "Scarlett Cook", "Grace Turner", "Chloe Phillips", "Victoria Roberts",
+            "Riley Collins", "Aria Edwards", "Lily Hughes", "Hannah Morgan", "Zoey Ward",
+            "Penelope Perry", "Lillian Butler", "Addison Brooks", "Nora Kelly", "Skylar Sanders"
+        ]
+    },
+    gh: {
+        male: [
+            "Mikko Virtanen", "Juha Korhonen", "Timo Nieminen", "Antti Mäkelä", "Sami Hämäläinen",
+            "Jari Laine", "Jukka Heikkinen", "Petri Koskinen", "Marko Järvinen", "Matti Lehtonen",
+            "Janne Koivisto", "Pekka Turunen", "Ville Salo", "Kari Rantanen", "Ari Karjalainen",
+            "Harri Kinnunen", "Jarmo Saarinen", "Toni Laitinen", "Kimmo Salminen", "Tuomo Ahonen",
+            "Eero Jokinen", "Vesa Savolainen", "Jussi Leppänen", "Teemu Heikkilä", "Kai Moilanen",
+            "Olli Lahtinen", "Risto Tammela", "Lasse Mäntynen", "Paavo Väänänen", "Taneli Hakala",
+            "Arto Mikkonen", "Väinö Peltola", "Henri Hyvönen", "Tapio Virtanen", "Petteri Pitkänen",
+            "Eemeli Laakso", "Riku Toivonen", "Veikko Niemi", "Eetu Repo", "Tuomas Halme",
+            "Viljo Heikkilä", "Ilkka Toivanen", "Erkki Suomalainen", "Jukka Vuori", "Mikael Kumpulainen",
+            "Miro Honkanen", "Arttu Oksanen", "Tapani Rautiainen", "Jere Parkkinen", "Timo Keskinen"
+        ],
+        female: [
+            "Anna Mäkinen", "Emilia Virtanen", "Sofia Laine", "Laura Hämäläinen", "Kaisa Korhonen",
+            "Elina Koskinen", "Heidi Saarinen", "Liisa Turunen", "Johanna Salminen", "Sanna Jokinen",
+            "Jenni Lehtonen", "Tiina Koivisto", "Maria Rantanen", "Päivi Karjalainen", "Katja Mäkelä",
+            "Kirsti Savolainen", "Marja Leppänen", "Riikka Heikkinen", "Susanna Salo", "Tuula Mäntynen",
+            "Niina Ahonen", "Minna Moilanen", "Kristiina Lahtinen", "Anu Hyvönen", "Ulla Väänänen",
+            "Sirpa Tammela", "Katri Hakala", "Johanna Mikkonen", "Pirjo Peltola", "Anni Pitkänen",
+            "Maija Toivonen", "Kirsi Niemi", "Outi Repo", "Mari Halme", "Eija Laakso", "Reeta Heikkilä",
+            "Heli Toivanen", "Leena Suomalainen", "Marita Vuori", "Päivi Kumpulainen", "Anne Honkanen",
+            "Anita Oksanen", "Eeva Rautiainen", "Hanna Parkkinen", "Elisa Keskinen", "Iina Mäkelä",
+            "Jaana Hämäläinen", "Maarit Korhonen", "Ritva Koskinen", "Auli Saarinen"
+        ]
+    },
+    fr: {
+        male: [
+            "Jean Dupont", "Pierre Fournier", "Louis Martin", "Henri Bernard", "Jacques Dubois",
+            "Philippe Moreau", "Michel Laurent", "André Lefevre", "Claude Girard", "Nicolas Roger",
+            "François Lambert", "Georges Blanchard", "Paul Lefevre", "Alain Morel", "René Gauthier",
+            "Marcel Chevalier", "Raymond Perrot", "Roger Lambert", "Gérard Lefevre", "Bernard Dupuis",
+            "Daniel Lefevre", "Christian Roussel", "Jean-Luc Lefevre", "Patrick Lefevre", "Thierry Lefevre",
+            "Olivier Lefevre", "Laurent Lefevre", "Stéphane Lefevre", "Xavier Lefevre", "Sébastien Lefevre"
+        ],
+        female: [
+            "Marie Curie", "Sophie Martin", "Lucie Bernard", "Claire Dubois", "Julie Moreau",
+            "Isabelle Laurent", "Catherine Lefevre", "Elise Girard", "Nathalie Roger", "Christine Lambert",
+            "Sandrine Blanchard", "Valérie Lefevre", "Anne Morel", "Sylvie Gauthier", "Laure Chevalier",
+            "Emmanuelle Perrot", "Virginie Lambert", "Amandine Lefevre", "Chloé Dupuis", "Camille Lefevre",
+            "Audrey Roussel", "Manon Lefevre", "Fanny Lefevre", "Inès Lefevre", "Océane Lefevre",
+            "Clara Lefevre", "Pauline Lefevre", "Eva Lefevre", "Léa Lefevre", "Justine Lefevre"
+        ]
+    },
+    de: {
+        male: [
+            "Hans Müller", "Peter Schmidt", "Klaus Fischer", "Jürgen Weber", "Thomas Wagner",
+            "Andreas Becker", "Stefan Hoffmann", "Michael Schröder", "Frank Koch", "Helmut Richter",
+            "Wolfgang Neumann", "Markus Schwarz", "Martin Zimmermann", "Ralf Braun", "Joachim Krüger",
+            "Erich Meier", "Norbert Lehmann", "Holger Maier", "Bernd Schmitt", "Uwe Schmitz",
+            "Rainer Schneider", "Dietmar Schulz", "Siegfried Hartmann", "Heinz Lang", "Otto Krause",
+            "Horst Lange", "Walter Groß", "Günter Schulze", "Karl Keller", "Herbert Wolf"
+        ],
+        female: [
+            "Anna Schmidt", "Maria Fischer", "Ingrid Weber", "Susanne Wagner", "Monika Becker",
+            "Ursula Hoffmann", "Petra Schröder", "Kerstin Koch", "Heike Richter", "Renate Neumann",
+            "Sabine Schwarz", "Elke Zimmermann", "Brigitte Braun", "Andrea Krüger", "Marion Meier",
+            "Rita Lehmann", "Claudia Maier", "Daniela Schmitt", "Gabriele Schmitz", "Martina Schneider",
+            "Angelika Schulz", "Christine Hartmann", "Birgit Lang", "Silke Krause", "Erika Groß",
+            "Hannelore Lange", "Margit Schulze", "Sigrid Keller", "Irene Wolf", "Ute Keller"
+        ]
+    },
+    cn: {
+        male: [
+            "Li Wei", "Wang Fang", "Zhang Wei", "Li Na", "Wang Wei",
+            "Zhang Yong", "Chen Wei", "Wang Jing", "Zhang Lei", "Li Jun",
+            "Wang Yan", "Zhang Jie", "Chen Jun", "Wang Li", "Zhang Jie",
+            "Li Lei", "Wang Jian", "Zhang Qiang", "Chen Ming", "Wang Lei",
+            "Zhang Bo", "Li Ming", "Wang Tao", "Zhang Shuai", "Chen Jie",
+            "Wang Ning", "Zhang Liang", "Li Ning", "Wang Hui", "Zhang Tao"
+        ],
+        female: [
+            "Li Na", "Wang Fang", "Zhang Li", "Chen Ping", "Wang Ying",
+            "Zhang Xin", "Li Jing", "Wang Hong", "Zhang Yan", "Chen Li",
+            "Wang Hui", "Zhang Jing", "Li Yu", "Wang Min", "Zhang Mei",
+            "Chen Hua", "Wang Juan", "Zhang Juan", "Li Mei", "Wang Li",
+            "Zhang Ping", "Li Ying", "Wang Xue", "Zhang Hui", "Chen Ying",
+            "Wang Rong", "Zhang Xue", "Li Jie", "Wang Yan", "Zhang Hong"
+        ]
+    },
+    jp: {
+        male: [
+            "Satoshi Nakamoto", "Haruka Takahashi", "Yuki Tanaka", "Kenta Yamamoto", "Taro Sato",
+            "Shota Suzuki", "Hiroshi Watanabe", "Ryo Yamada", "Kazuya Kobayashi", "Kenji Ito",
+            "Takashi Nakamura", "Shinji Kato", "Yuji Maeda", "Naoki Yoshida", "Takeshi Matsumoto",
+            "Masahiro Inoue", "Kazuki Shimizu", "Yusuke Hayashi", "Shohei Saito", "Hiroyuki Kimura",
+            "Ryosuke Mori", "Koji Fujita", "Yuta Arai", "Daisuke Ono", "Takuya Nakajima",
+            "Kouichi Nishimura", "Shun Abe", "Tomoya Takeda", "Atsushi Matsuda", "Kazuma Sugiyama"
+        ],
+        female: [
+            "Haruka Takahashi", "Sakura Yamamoto", "Yui Tanaka", "Aoi Sato", "Rin Suzuki",
+            "Yuna Watanabe", "Mio Yamada", "Akari Kobayashi", "Miyu Ito", "Hana Nakamura",
+            "Riko Kato", "Hina Maeda", "Saki Yoshida", "Mei Matsumoto", "Yuka Inoue",
+            "Rina Shimizu", "Nana Hayashi", "Yuri Saito", "Mizuki Kimura", "Aya Mori",
+            "Airi Fujita", "Risa Arai", "Asuka Ono", "Reina Nakajima", "Yuka Nishimura",
+            "Nanami Abe", "Mio Takeda", "Ami Matsuda", "Nao Sugiyama", "Hinata Yamamoto"
+        ]
+    },
+    ng: {
+        male: [
+            "Jack Smith", "William Brown", "James Wilson", "Noah Taylor", "Lucas Johnson",
+            "Henry White", "Charlie King", "Leo Wright", "Thomas Hill", "Isaac Walker",
+            "Liam Scott", "Oscar Young", "Ethan Allen", "Alexander Harris", "Benjamin Hall",
+            "Logan Martin", "Mason Green", "Harrison Adams", "Archie Campbell", "Hunter Mitchell",
+            "Samuel Cook", "Joshua Bell", "Oliver Carter", "Elijah Parker", "Xavier Edwards",
+            "Sebastian Collins", "Jaxon Morris", "Flynn Rogers", "Daniel Reed", "Henry Ward"
+        ],
+        female: [
+            "Olivia Smith", "Amelia Brown", "Ava Wilson", "Isla Taylor", "Mia Johnson",
+            "Sophia White", "Charlotte King", "Harper Wright", "Zoe Hill", "Emily Walker",
+            "Grace Scott", "Ella Young", "Lily Allen", "Sienna Harris", "Chloe Hall",
+            "Alyssa Martin", "Aria Green", "Zara Adams", "Isabella Campbell", "Abigail Mitchell",
+            "Avery Cook", "Luna Bell", "Evie Carter", "Scarlett Parker", "Ruby Edwards",
+            "Matilda Collins", "Hannah Morris", "Sophie Rogers", "Holly Reed", "Ivy Ward"
+        ]
+    },
+    za: {
+        male: [
+            "Christian Jensen", "Frederik Nielsen", "Mikkel Hansen", "Emil Pedersen", "Mathias Andersen",
+            "Sebastian Christensen", "Oliver Thomsen", "Lucas Sørensen", "William Madsen", "Alexander Larsen",
+            "Noah Jensen", "Victor Petersen", "Oscar Jensen", "Elias Andersen", "Benjamin Hansen",
+            "Magnus Nielsen", "Simon Christiansen", "Mads Jørgensen", "Rasmus Rasmussen", "Jonathan Olsen",
+            "Daniel Mortensen", "Samuel Christensen", "Anton Holm", "Felix Eriksen", "Jacob Hansen",
+            "David Lauritsen", "Philip Thomsen", "Carl Møller", "Martin Pedersen", "Gustav Knudsen",
+            "Kasper Christensen", "Patrick Sørensen", "Tobias Clausen", "Johannes Thomsen", "Liam Nielsen",
+            "Lucas Pedersen", "Viktor Jensen", "Adam Christensen", "Andreas Hansen", "Sebastian Pedersen",
+            "Marcus Larsen", "Niklas Andersen", "Oscar Nielsen", "Mikkel Pedersen", "Kristian Madsen",
+            "Frederik Thomsen", "Mathias Sørensen", "Simon Petersen", "David Hansen"
+        ],
+        female: [
+            "Emma Nielsen", "Sofie Hansen", "Freja Andersen", "Ida Pedersen", "Laura Christensen",
+            "Anna Thomsen", "Maja Jensen", "Clara Sørensen", "Lærke Madsen", "Josefine Larsen",
+            "Sofie Petersen", "Alma Andersen", "Isabella Jensen", "Katrine Nielsen", "Mille Hansen",
+            "Julie Pedersen", "Ella Christensen", "Signe Thomsen", "Cecilie Sørensen", "Emma Madsen",
+            "Sara Larsen", "Liva Pedersen", "Victoria Christensen", "Marie Jensen", "Agnes Nielsen",
+            "Mette Hansen", "Olivia Andersen", "Luna Thomsen", "Mathilde Sørensen", "Caroline Madsen",
+            "Amalie Larsen", "Nanna Pedersen", "Filippa Christensen", "Astrid Jensen", "Asta Nielsen",
+            "Rosa Hansen", "Lea Andersen", "Alberte Thomsen", "Malou Sørensen", "Anna Madsen",
+            "Lærke Larsen", "Silje Pedersen", "Laura Christensen", "Celina Jensen", "Emma Nielsen",
+            "Liva Hansen", "Nanna Andersen", "Rikke Thomsen", "Vigga Sørensen"
+        ]
+    }
+};
+
+function generateIdentity() {
+    const country = document.getElementById("country").value;
+    const gender = document.getElementById("gender").value;
+    const names = namesByCountry[country] ? namesByCountry[country][gender] : undefined;
+
+    if (!names) {
+        console.error(`No names found for country: ${country} and gender: ${gender}`);
+        return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * names.length);
+    const selectedName = names[randomIndex];
+
+    document.getElementById("fullName").innerText = "Name: " + selectedName;
+
+    // Generate other random details here based on the country
+    document.getElementById("address").innerText = "Address: " + generateRandomAddress();
+    document.getElementById("motherMaidenName").innerText = "Mother's maiden name: " + generateRandomName();
+    document.getElementById("ssn").innerText = "SSN: " + generateRandomSSN();
+    document.getElementById("geoCoordinates").innerText = "Geo coordinates: " + generateRandomGeoCoordinates();
+    document.getElementById("phone").innerText = "Phone: " + generateRandomPhone();
+    document.getElementById("birthday").innerText = "Birthday: " + generateRandomBirthday();
+    document.getElementById("age").innerText = "Age: " + generateRandomAge();
+    document.getElementById("zodiac").innerText = "Tropical zodiac: " + generateRandomZodiac();
+    document.getElementById("email").innerText = "Email Address: " + generateRandomEmail();
+    document.getElementById("username").innerText = "Username: " + generateRandomUsername();
+   document.getElementById("password").innerText = "Password: " + generateRandomPassword();
+    document.getElementById("website").innerText = "Website: " + generateRandomWebsite();
+    document.getElementById("browserAgent").innerText = "Browser user agent: " + generateRandomBrowserAgent();
+    document.getElementById("visa").innerText = "Visa: " + generateRandomVisa();
+    document.getElementById("expires").innerText = "Expires: " + generateRandomExpiryDate();
+    document.getElementById("cvv2").innerText = "CVV2: " + generateRandomCVV();
+    document.getElementById("company").innerText = "Company: " + generateRandomCompany();
+    document.getElementById("occupation").innerText = "Occupation: " + generateRandomOccupation();
+    document.getElementById("height").innerText = "Height: " + generateRandomHeight();
+    document.getElementById("weight").innerText = "Weight: " + generateRandomWeight();
+    document.getElementById("bloodType").innerText = "Blood type: " + generateRandomBloodType();
+    document.getElementById("ups").innerText = "UPS tracking number: " + generateRandomUPSTrackingNumber();
+    document.getElementById("westernUnion").innerText = "Western Union MTCN: " + generateRandomMTCN();
+    document.getElementById("moneyGram").innerText = "MoneyGram MTCN: " + generateRandomMTCN();
+    document.getElementById("favoriteColor").innerText = "Favorite color: " + generateRandomColor();
+    document.getElementById("vehicle").innerText = "Vehicle: " + generateRandomVehicle();
+    document.getElementById("guid").innerText = "GUID: " + generateRandomGUID();
+}
+
+// Example functions to generate random details (you can customize these)
+function generateRandomAddress() {
+    const addresses = ["3148 Jadewood Farms, East Orange, NJ 07017", "123 Main St, Springfield, IL 62701"];
+    return addresses[Math.floor(Math.random() * addresses.length)];
+}
+
+function generateRandomName() {
+    const names = ["McCormack", "Johnson", "Smith", "Brown"];
+    return names[Math.floor(Math.random() * names.length)];
+}
+
+function generateRandomSSN() {
+    return "XXX-XX-" + Math.floor(Math.random() * 9000 + 1000);
+}
+
+function generateRandomGeoCoordinates() {
+    return `${(Math.random() * 180 - 90).toFixed(6)}, ${(Math.random() * 360 - 180).toFixed(6)}`;
+}
+
+function generateRandomPhone() {
+    return `(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`;
+}
+
+function generateRandomBirthday() {
+    const year = Math.floor(Math.random() * 100 + 1920);
+    const month = Math.floor(Math.random() * 12 + 1);
+    const day = Math.floor(Math.random() * 28 + 1);
+    return `${month}/${day}/${year}`;
+}
+
+function generateRandomAge() {
+    return Math.floor(Math.random() * 100 + 1) + " years old";
+}
+
+function generateRandomZodiac() {
+    const zodiacs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+    return zodiacs[Math.floor(Math.random() * zodiacs.length)];
+}
+
+function generateRandomEmail() {
+    const providers = ["real.com", "money.com", "webmail.com"];
+    const username = generateRandomUsername().toLowerCase();
+    return `${username}@${providers[Math.floor(Math.random() * providers.length)]}`;
+}
+
+function generateRandomUsername() {
+    const adjectives = ["Cool", "Smart", "Fast", "Happy"];
+    const nouns = ["Cat", "Dog", "Bird", "Fish"];
+    return `${adjectives[Math.floor(Math.random() * adjectives.length)]}${nouns[Math.floor(Math.random() * nouns.length)]}`;
+}
+
+function generateRandomPassword() {
+    return Math.random().toString(36).slice(-8);
+}
+
+function generateRandomWebsite() {
+    const websites = ["example.com", "fakepage.net", "mysite.org"];
+    return websites[Math.floor(Math.random() * websites.length)];
+}
+
+function generateRandomBrowserAgent() {
+    const agents = [
+        "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"
+    ];
+    return agents[Math.floor(Math.random() * agents.length)];
+}
+
+function generateRandomVisa() {
+    const prefix = "4556 9065 ";
+    return prefix + Math.floor(Math.random() * 10000) + " " + Math.floor(Math.random() * 10000);
+}
+
+function generateRandomExpiryDate() {
+    const month = Math.floor(Math.random() * 12 + 1).toString().padStart(2, "0");
+    const year = Math.floor(Math.random() * 10 + 2025);
+    return `${month}/${year}`;
+}
+
+function generateRandomCVV() {
+    return Math.floor(Math.random() * 900 + 100);
+}
+
+function generateRandomCompany() {
+    const companies = ["The White Swan", "Tech Innovators", "Global Solutions"];
+    return companies[Math.floor(Math.random() * companies.length)];
+}
+
+function generateRandomOccupation() {
+    const occupations = ["Enrollment specialist", "Software Developer", "Data Analyst"];
+    return occupations[Math.floor(Math.random() * occupations.length)];
+}
+
+function generateRandomHeight() {
+    return Math.floor(Math.random() * 100 + 50) + " inches";
+}
+
+function generateRandomWeight() {
+    return Math.floor(Math.random() * 100 + 100) + " pounds";
+}
+
+function generateRandomBloodType() {
+    const bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+    return bloodTypes[Math.floor(Math.random() * bloodTypes.length)];
+}
+
+function generateRandomUPSTrackingNumber() {
+    return `1Z ${Math.floor(Math.random() * 1000)} ${Math.floor(Math.random() * 1000)} ${Math.floor(Math.random() * 1000)} ${Math.floor(Math.random() * 1000)}`;
+}
+
+function generateRandomMTCN() {
+    return Math.floor(Math.random() * 10000000000);
+}
+
+function generateRandomColor() {
+    const colors = ["Purple", "Blue", "Green", "Red"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function generateRandomVehicle() {
+    const vehicles = ["2000 Chevrolet Tracker", "2015 Ford Fiesta", "2019 Tesla Model 3"];
+    return vehicles[Math.floor(Math.random() * vehicles.length)];
+}
+
+function generateRandomGUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+function copyToClipboard() {
+            const fullName = document.getElementById("fullName").innerText;
+            navigator.clipboard.writeText(fullName).then(() => {
+                alert("Name copied to clipboard!");
+            });
+        }
+
+// Add more random detail generation functions as needed
+    </script>
+</body>
+</html>
