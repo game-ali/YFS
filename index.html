@@ -206,60 +206,148 @@ button:hover {
     </footer>
     <script>
         const namesByCountry = {
-    us: {
-        male: [
-            "John Doe", "Bob Brown", "Michael Smith", "James Johnson", "Robert Miller", 
-            "William Davis", "David Garcia", "Richard Martinez", "Charles Wilson", "Joseph Anderson",
-            "Thomas Taylor", "Christopher Thomas", "Daniel Jackson", "Matthew White", "Anthony Harris",
-            "Mark Martin", "Donald Thompson", "Steven Robinson", "Paul Clark", "Andrew Lewis",
-            "Joshua Lee", "Kenneth Walker", "Kevin Hall", "Brian Allen", "George Young",
-            "Edward King", "Ronald Wright", "Timothy Scott", "Jason Green", "Jeffrey Adams"
-        ],
-        female: [
-            "Jane Doe", "Alice Johnson", "Mary Smith", "Patricia Brown", "Linda Miller",
-            "Barbara Davis", "Elizabeth Garcia", "Jennifer Martinez", "Maria Wilson", "Susan Anderson",
-            "Margaret Taylor", "Dorothy Thomas", "Lisa Jackson", "Nancy White", "Karen Harris",
-            "Betty Martin", "Helen Thompson", "Sandra Robinson", "Donna Clark", "Carol Lewis",
-            "Ruth Lee", "Sharon Walker", "Michelle Hall", "Laura Allen", "Sarah Young",
-            "Kimberly King", "Deborah Wright", "Jessica Scott", "Shirley Green", "Cynthia Adams"
-        ]
+   us: {
+    male: [
+        "Alexander Doe", "Benjamin Brown", "Caleb Smith", "Dylan Johnson", "Ethan Miller",
+        "Finn Davis", "Graham Garcia", "Henry Martinez", "Isaac Wilson", "Jack Anderson",
+        "Kyle Taylor", "Liam Thomas", "Mason Jackson", "Noah White", "Owen Harris",
+        "Parker Martin", "Quinn Thompson", "Ryan Robinson", "Samuel Clark", "Tyler Lewis",
+        "Ulysses Lee", "Victor Walker", "Wyatt Hall", "Xander Allen", "Yusuf Young",
+        "Zachary King", "Aiden Wright", "Blake Scott", "Colton Green", "Declan Adams",
+        "Elijah Bennett", "Felix Carter", "Gavin Phillips", "Hunter Campbell", "Ian Parker",
+        "James Evans", "Kai Hernandez", "Logan Baker", "Maxwell Mitchell", "Nathaniel Perez",
+        "Oliver Roberts", "Patrick Turner", "Quincy Collins", "Ryder Edwards", "Sawyer Diaz",
+        "Tristan Rivera", "Uriah Torres", "Vance Stevens", "Weston Barnes", "Xavier Gonzales",
+        "Yale Fisher", "Zane Simmons", "Aaron Romero", "Brandon Knight", "Chase Barrett",
+        "Dexter Hunter", "Elliot Lopez", "Felipe Hayes", "Grant Weaver", "Harrison Nichols",
+        "Ivan Soto", "Jayden Jacobs", "Keegan Hayes", "Levi Bryant", "Maddox Graham",
+        "Nolan Nelson", "Omar Ramirez", "Peyton Ross", "Reed Cook", "Silas Bell",
+        "Tate Murphy", "Uriel Cox", "Vincent Moore", "Westley Burns", "Xander Weber",
+        "Yosef Peterson", "Zion Gordon", "Asher Oliver", "Bennett Kim", "Carson Cox",
+        "Dean Lee", "Eli James", "Finn Wood", "Griffin Richardson", "Hudson Fisher",
+        "Indigo Mitchell", "Jasper Price", "Kingston Bell", "Lachlan Simmons", "Milo Daniels",
+        "Nash Butler", "Odin Sanders", "Pierce Myers", "Rylan Long", "Soren Reed",
+        "Theo Knight", "Uri Armstrong", "Vince Knight", "Weston Young", "Xander Hayes",
+        "York Duncan", "Zeke Evans", "Arlo Perry", "Beckett Washington", "Caden Mitchell",
+        "Deacon Franklin", "Emerson Austin", "Forrest Spencer", "Gideon Ward", "Huxley Ellis"
+    ],
+    female: [
+        "Ava Doe", "Bella Johnson", "Clara Smith", "Daisy Brown", "Ella Miller",
+        "Fiona Davis", "Grace Garcia", "Hannah Martinez", "Isla Wilson", "Jasmine Anderson",
+        "Kaitlyn Taylor", "Lily Thomas", "Mia Jackson", "Nora White", "Olivia Harris",
+        "Piper Martin", "Quinn Thompson", "Ruby Robinson", "Sophie Clark", "Tessa Lewis",
+        "Uma Lee", "Violet Walker", "Willow Hall", "Xenia Allen", "Yara Young",
+        "Zoe King", "Abigail Wright", "Brooke Scott", "Cora Green", "Delilah Adams",
+        "Evelyn Bennett", "Freya Carter", "Gabriella Phillips", "Harper Campbell", "Ivy Parker",
+        "Juliet Evans", "Keira Hernandez", "Leah Baker", "Maya Mitchell", "Natalie Perez",
+        "Ophelia Roberts", "Penelope Turner", "Quincy Collins", "Rose Edwards", "Stella Diaz",
+        "Talia Rivera", "Uma Torres", "Vera Stevens", "Willa Barnes", "Ximena Gonzales",
+        "Yvette Fisher", "Zara Simmons", "Adeline Romero", "Briana Knight", "Camila Barrett",
+        "Daphne Hunter", "Elena Lopez", "Faith Hayes", "Gemma Weaver", "Hazel Nichols",
+        "Iris Soto", "Juliana Jacobs", "Katherine Hayes", "Layla Bryant", "Madeline Graham",
+        "Naomi Nelson", "Olga Ramirez", "Paisley Ross", "Renee Cook", "Sadie Bell",
+        "Tessa Murphy", "Ursula Cox", "Valerie Moore", "Wendy Burns", "Xenia Weber",
+        "Yvonne Peterson", "Zelda Gordon", "Alice Oliver", "Bridget Kim", "Celine Cox",
+        "Diana Lee", "Eliza James", "Felicity Wood", "Georgia Richardson", "Harriet Fisher",
+        "Imogen Mitchell", "Jane Price", "Kendra Bell", "Lena Simmons", "Mabel Daniels",
+        "Nina Butler", "Olive Sanders", "Penny Myers", "Riley Long", "Serena Reed",
+        "Tara Knight", "Una Armstrong", "Violet Knight", "Willa Young", "Xenia Hayes",
+        "Yvette Duncan", "Zoey Evans", "Autumn Perry", "Brielle Washington", "Cassidy Mitchell",
+        "Diana Franklin", "Emilia Austin", "Frances Spencer", "Giselle Ward", "Hope Ellis"
+    ]
+
     },
     uk: {
-        male: [
-            "James Smith", "Michael Brown", "Peter Johnson", "David Taylor", "Paul White",
-            "Mark Harris", "John Lewis", "Andrew Walker", "William Hall", "Thomas Allen",
-            "Charles Young", "Edward King", "Christopher Wright", "Matthew Scott", "Anthony Green",
-            "Nicholas Adams", "George Baker", "Joseph Carter", "Daniel Cook", "Benjamin Turner",
-            "Samuel Phillips", "Oliver Roberts", "Henry Collins", "Alexander Edwards", "Patrick Hughes",
-            "Adam Morgan", "Simon Ward", "Jason Cox", "Robert Perry", "Stephen Butler"
-        ],
-        female: [
-            "Emily Johnson", "Sarah Davis", "Anna Brown", "Susan Smith", "Jessica Taylor",
-            "Karen White", "Helen Harris", "Laura Lewis", "Michelle Walker", "Rebecca Hall",
-            "Ruth Allen", "Deborah Young", "Sharon King", "Linda Wright", "Emma Scott",
-            "Catherine Green", "Margaret Adams", "Jane Baker", "Samantha Carter", "Chloe Cook",
-            "Victoria Turner", "Hannah Phillips", "Charlotte Roberts", "Amy Collins", "Rachel Edwards",
-            "Claire Hughes", "Amanda Morgan", "Melissa Ward", "Christine Cox", "Angela Perry"
-        ]
+    male: [
+        "James Smith", "Michael Brown", "Peter Johnson", "David Taylor", "Paul White",
+        "Mark Harris", "John Lewis", "Andrew Walker", "William Hall", "Thomas Allen",
+        "Charles Young", "Edward King", "Christopher Wright", "Matthew Scott", "Anthony Green",
+        "Nicholas Adams", "George Baker", "Joseph Carter", "Daniel Cook", "Benjamin Turner",
+        "Samuel Phillips", "Oliver Roberts", "Henry Collins", "Alexander Edwards", "Patrick Hughes",
+        "Adam Morgan", "Simon Ward", "Jason Cox", "Robert Perry", "Stephen Butler",
+        "Archie Wilson", "Sebastian James", "Finn Campbell", "Lucas Shaw", "Jacob Clarke",
+        "Harry Price", "Elliot Butler", "Reuben Kelly", "Henry Bell", "Max Knight",
+        "Isaac West", "Freddie Murphy", "Oscar Richards", "Theo Simmons", "Teddy Evans",
+        "Arthur Green", "Jackson Holmes", "Riley Carter", "Toby Lee", "Harrison Scott",
+        "Liam Gray", "Alfie Adams", "Joshua Clarke", "Louie Lewis", "Ethan Wright",
+        "Logan Bailey", "Rory Brooks", "Jake Ellis", "Harvey Hunt", "Kai Edwards",
+        "Archer Mitchell", "Blake Perry", "Dylan Adams", "Jude Stewart", "Frankie Russell",
+        "Evan Cox", "Lewis Edwards", "Adam Jenkins", "Oscar Butler", "Jack Clark",
+        "Ryan Hughes", "Sonny Cook", "Isaiah Ward", "Jayden Collins", "Samuel Evans",
+        "Zachary Edwards", "Joseph Thomas", "Frederick Martin", "Gabriel Richardson", "Aaron King",
+        "Kian Simmons", "Nate Butler", "Tate Scott", "Rylan White", "Seth Campbell",
+        "Orlando Turner", "Hudson Hughes", "Grayson Perry", "Benedict Harris", "Charles Stewart",
+        "Everett Wright", "Lincoln Clarke", "Miles Johnson", "Declan Brooks", "Jasper Bell",
+        "Micah Lee", "Rowan Scott", "Tristan Evans", "Flynn Turner", "Carter Hughes"
+    ],
+    female: [
+        "Emily Johnson", "Sarah Davis", "Anna Brown", "Susan Smith", "Jessica Taylor",
+        "Karen White", "Helen Harris", "Laura Lewis", "Michelle Walker", "Rebecca Hall",
+        "Ruth Allen", "Deborah Young", "Sharon King", "Linda Wright", "Emma Scott",
+        "Catherine Green", "Margaret Adams", "Jane Baker", "Samantha Carter", "Chloe Cook",
+        "Victoria Turner", "Hannah Phillips", "Charlotte Roberts", "Amy Collins", "Rachel Edwards",
+        "Claire Hughes", "Amanda Morgan", "Melissa Ward", "Christine Cox", "Angela Perry",
+        "Sophie Williams", "Olivia Jones", "Isabella Taylor", "Mia Moore", "Daisy Clark",
+        "Lily Young", "Poppy King", "Freya Hill", "Aria Edwards", "Grace Kelly",
+        "Evie Harris", "Isla Baker", "Elsie Adams", "Florence Campbell", "Willow Wright",
+        "Phoebe Cox", "Holly Allen", "Lottie Lewis", "Harper Evans", "Ivy Brooks",
+        "Georgia Perry", "Alice Scott", "Ellie Hughes", "Ruby Cook", "Thea Jenkins",
+        "Luna Green", "Scarlett Butler", "Jessica Davis", "Matilda Allen", "Emilia King",
+        "Rosie Smith", "Penelope Johnson", "Sienna Wright", "Layla Campbell", "Aurora Walker",
+        "Bella Young", "Summer Hughes", "Evelyn Clark", "Maya Cox", "Madison Baker",
+        "Maisie Evans", "Lyla Collins", "Annie Turner", "Zara Jenkins", "Darcie Perry",
+        "Amelia Scott", "Megan Davis", "Elizabeth White", "Emma Harris", "Harper Walker",
+        "Lara Clark", "Lottie Campbell", "Pippa Green", "Gracie Lewis", "Eva Butler",
+        "Imogen Young", "Iris Hill", "Millie Stewart", "Hazel Taylor", "Ayla Moore",
+        "Eliza Edwards", "Bonnie Hughes", "Eleanor Wilson", "Ada Harris", "Lillian King"
+    ]
+
+
     },
-    ca: {
-        male: [
-            "Daniel Wilson", "Victoria Martin", "Matthew Lee", "Sophia Thompson", "Isaac Moore",
-            "John Young", "James Brown", "William Johnson", "David White", "Richard Green",
-            "Joseph Harris", "Charles Lewis", "Thomas Walker", "Christopher Hall", "Andrew Allen",
-            "Joshua Scott", "Nicholas Wright", "Ryan King", "Nathan Adams", "Tyler Baker",
-            "Brandon Carter", "Justin Cook", "Benjamin Turner", "Jonathan Phillips", "Jacob Roberts",
-            "Samuel Collins", "Ethan Edwards", "Alexander Hughes", "Christian Morgan", "Logan Ward"
-        ],
-        female: [
-            "Sophia Thompson", "Emma Martin", "Olivia Lee", "Ava Brown", "Isabella Wilson",
-            "Mia Johnson", "Charlotte Lewis", "Amelia Walker", "Harper Hall", "Evelyn Allen",
-            "Abigail Scott", "Emily Wright", "Elizabeth King", "Mila Adams", "Ella Baker",
-            "Avery Carter", "Scarlett Cook", "Grace Turner", "Chloe Phillips", "Victoria Roberts",
-            "Riley Collins", "Aria Edwards", "Lily Hughes", "Hannah Morgan", "Zoey Ward",
-            "Penelope Perry", "Lillian Butler", "Addison Brooks", "Nora Kelly", "Skylar Sanders"
-        ]
-    },
+   ca: {
+    male: [
+        "Daniel Wilson", "Victoria Martin", "Matthew Lee", "Sophia Thompson", "Isaac Moore",
+        "John Young", "James Brown", "William Johnson", "David White", "Richard Green",
+        "Joseph Harris", "Charles Lewis", "Thomas Walker", "Christopher Hall", "Andrew Allen",
+        "Joshua Scott", "Nicholas Wright", "Ryan King", "Nathan Adams", "Tyler Baker",
+        "Brandon Carter", "Justin Cook", "Benjamin Turner", "Jonathan Phillips", "Jacob Roberts",
+        "Samuel Collins", "Ethan Edwards", "Alexander Hughes", "Christian Morgan", "Logan Ward",
+        "Lucas Bennett", "Jackson Carter", "Owen Price", "Henry Richardson", "Leo Foster",
+        "Mason Brooks", "Gabriel Watson", "Anthony Hayes", "Dominic Russell", "Sebastian Kelly",
+        "Hunter Sanders", "Zachary Reed", "Connor Butler", "Eli Rogers", "Asher Peterson",
+        "Nolan Adams", "Aaron Bailey", "Aidan Ross", "Caleb Bailey", "Adrian Murphy",
+        "Austin Coleman", "Adam Chapman", "Carter West", "Parker Lane", "Brayden Hunt",
+        "Evan Jordan", "Grayson Evans", "Lincoln Bailey", "Hudson Rivera", "Ezra Brooks",
+        "Miles Griffin", "Carson Brooks", "Easton Bailey", "Chase Butler", "Oliver Cook",
+        "Elias Evans", "Maverick Reed", "Jordan Collins", "Sawyer Butler", "Jameson Cook",
+        "Declan Richardson", "Bryson Harris", "Bentley Collins", "Ryder Reed", "Kingston Butler",
+        "Jaxson Perry", "Kaiden Roberts", "Roman Edwards", "Emmett Cox", "Axel Kelly",
+        "Gavin Butler", "Brody Sanders", "Weston Brooks", "Braxton Roberts", "Rowan Adams",
+        "Barrett Harris", "Beckham Perry", "Bennett Collins", "Charlie Richardson", "Jude Evans",
+        "Jasper Cook", "Luka Cox", "Zane Ross", "Blake Butler", "Jace Reed"
+    ],
+    female: [
+        "Sophia Thompson", "Emma Martin", "Olivia Lee", "Ava Brown", "Isabella Wilson",
+        "Mia Johnson", "Charlotte Lewis", "Amelia Walker", "Harper Hall", "Evelyn Allen",
+        "Abigail Scott", "Emily Wright", "Elizabeth King", "Mila Adams", "Ella Baker",
+        "Avery Carter", "Scarlett Cook", "Grace Turner", "Chloe Phillips", "Victoria Roberts",
+        "Riley Collins", "Aria Edwards", "Lily Hughes", "Hannah Morgan", "Zoey Ward",
+        "Penelope Perry", "Lillian Butler", "Addison Brooks", "Nora Kelly", "Skylar Sanders",
+        "Layla Thompson", "Aurora Martin", "Zara Lee", "Willow Brown", "Emery Wilson",
+        "Gabriella Johnson", "Sophie Lewis", "Luna Walker", "Brooklyn Hall", "Rylee Allen",
+        "Ivy Scott", "Everly Wright", "Isabel King", "Naomi Adams", "Madeline Baker",
+        "Brielle Carter", "Eva Cook", "Eliana Turner", "Violet Phillips", "Paisley Roberts",
+        "Piper Collins", "Ryleigh Edwards", "Jade Hughes", "Brynlee Morgan", "Mackenzie Ward",
+        "Alina Perry", "Adeline Butler", "Emerson Brooks", "Cora Kelly", "Ariana Sanders",
+        "Camila Thompson", "Clara Martin", "Savannah Lee", "Julia Brown", "Stella Wilson",
+        "Margaret Johnson", "Josie Lewis", "Adalyn Walker", "Reese Hall", "Juliette Allen",
+        "Serena Scott", "Leah Wright", "Allison King", "Mariah Adams", "Lydia Baker",
+        "Delilah Carter", "Fiona Cook", "Laila Turner", "Megan Phillips", "Mira Roberts",
+        "Genevieve Collins", "Gracie Edwards", "Summer Hughes", "Anastasia Morgan", "Catherine Ward",
+        "Elliana Perry", "Hallie Butler", "Tessa Brooks", "Lennon Kelly", "Raegan Sanders"
+    ]
+},
+
     gh: {
         male: [
             "Mikko Virtanen", "Juha Korhonen", "Timo Nieminen", "Antti Mäkelä", "Sami Hämäläinen",
@@ -359,22 +447,47 @@ button:hover {
         ]
     },
     ng: {
-        male: [
-            "Jack Smith", "William Brown", "James Wilson", "Noah Taylor", "Lucas Johnson",
-            "Henry White", "Charlie King", "Leo Wright", "Thomas Hill", "Isaac Walker",
-            "Liam Scott", "Oscar Young", "Ethan Allen", "Alexander Harris", "Benjamin Hall",
-            "Logan Martin", "Mason Green", "Harrison Adams", "Archie Campbell", "Hunter Mitchell",
-            "Samuel Cook", "Joshua Bell", "Oliver Carter", "Elijah Parker", "Xavier Edwards",
-            "Sebastian Collins", "Jaxon Morris", "Flynn Rogers", "Daniel Reed", "Henry Ward"
-        ],
-        female: [
-            "Olivia Smith", "Amelia Brown", "Ava Wilson", "Isla Taylor", "Mia Johnson",
-            "Sophia White", "Charlotte King", "Harper Wright", "Zoe Hill", "Emily Walker",
-            "Grace Scott", "Ella Young", "Lily Allen", "Sienna Harris", "Chloe Hall",
-            "Alyssa Martin", "Aria Green", "Zara Adams", "Isabella Campbell", "Abigail Mitchell",
-            "Avery Cook", "Luna Bell", "Evie Carter", "Scarlett Parker", "Ruby Edwards",
-            "Matilda Collins", "Hannah Morris", "Sophie Rogers", "Holly Reed", "Ivy Ward"
-        ]
+    male: [
+        "Jack Smith", "William Brown", "James Wilson", "Noah Taylor", "Lucas Johnson",
+        "Henry White", "Charlie King", "Leo Wright", "Thomas Hill", "Isaac Walker",
+        "Liam Scott", "Oscar Young", "Ethan Allen", "Alexander Harris", "Benjamin Hall",
+        "Logan Martin", "Mason Green", "Harrison Adams", "Archie Campbell", "Hunter Mitchell",
+        "Samuel Cook", "Joshua Bell", "Oliver Carter", "Elijah Parker", "Xavier Edwards",
+        "Sebastian Collins", "Jaxon Morris", "Flynn Rogers", "Daniel Reed", "Henry Ward",
+        "Wyatt Murphy", "Landon Brooks", "Aiden Perez", "Caleb Morris", "Julian Bennett",
+        "Austin Phillips", "Miles Ross", "Grayson Rogers", "Nathaniel Reed", "Ryder Ward",
+        "Blake Griffin", "Parker Foster", "Wesley Hayes", "Nolan Barnes", "Ezra Sullivan",
+        "Jameson Kelly", "Bentley Mitchell", "Easton Adams", "Finn Edwards", "Bentley Gray",
+        "Axel Coleman", "Declan Sanders", "Elliot Bell", "Gavin Murphy", "Leonardo Griffin",
+        "Malcolm Campbell", "Preston Turner", "Ronin Gonzales", "Silas Martinez", "Simon Brooks",
+        "Theodore Bailey", "Winston Perez", "Beau Clarke", "Corbin Bennett", "Dante Phillips",
+        "Emanuel Ross", "Jasper Rogers", "Kaden Reed", "Maddox Ward", "Paxton Parker",
+        "Roman Carter", "Sullivan Murphy", "Tristan Barnes", "Valentino Foster", "Wilder Hayes",
+        "Xander King", "Zayden Fisher", "Aldo Barnes", "Casper Cook", "Damon Lewis",
+        "Edgar Hall", "Finnley Carter", "Gage Brooks", "Halston Phillips", "Jett Reed",
+        "Kaiser Ward", "Langston Martinez", "Nico Rogers", "Orson Edwards", "Porter Foster",
+        "Ronan Kelly", "Talon Mitchell", "Ulysses Turner", "Victor Gonzales", "Wes Reed"
+    ],
+    female: [
+        "Olivia Smith", "Amelia Brown", "Ava Wilson", "Isla Taylor", "Mia Johnson",
+        "Sophia White", "Charlotte King", "Harper Wright", "Zoe Hill", "Emily Walker",
+        "Grace Scott", "Ella Young", "Lily Allen", "Sienna Harris", "Chloe Hall",
+        "Alyssa Martin", "Aria Green", "Zara Adams", "Isabella Campbell", "Abigail Mitchell",
+        "Avery Cook", "Luna Bell", "Evie Carter", "Scarlett Parker", "Ruby Edwards",
+        "Matilda Collins", "Hannah Morris", "Sophie Rogers", "Holly Reed", "Ivy Ward",
+        "Aurora Jones", "Bella Collins", "Claire Roberts", "Daphne Cox", "Eliana Butler",
+        "Fiona Hughes", "Gabrielle Brooks", "Hazel Foster", "Jade Kelly", "Kinsley Martinez",
+        "Lila Ross", "Madeline Ward", "Nova Mitchell", "Opal Turner", "Quinn Gonzales",
+        "Reese Rogers", "Savannah Edwards", "Talia Lewis", "Uma Walker", "Violet Carter",
+        "Willow Parker", "Ximena Perez", "Yvonne Griffin", "Zoe Barnes", "Adeline Murphy",
+        "Bailey Hall", "Cadence Martinez", "Daisy Phillips", "Eliza King", "Freya Bailey",
+        "Gemma Ross", "Hailey Martinez", "Isla Rogers", "Jasmine Edwards", "Kylie Foster",
+        "Luna Brooks", "Maya Turner", "Nora Cox", "Olive Roberts", "Paisley Parker",
+        "Rory Jones", "Savanna Morris", "Teagan Hughes", "Vera Collins", "Wren Carter",
+        "Xena Hill", "Yara Young", "Zara Allen", "Addison Scott", "Brianna Wright",
+        "Camille Johnson", "Diana Young", "Ember Walker", "Frances Allen", "Gianna Hall",
+        "Harlow Wright", "India Brown", "Josephine King", "Keira Adams", "Lena Collins"
+    ]
     },
     za: {
         male: [
