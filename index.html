@@ -530,7 +530,7 @@ function generateIdentity() {
     const randomIndex = Math.floor(Math.random() * names.length);
     const selectedName = names[randomIndex];
 
-    document.getElementById("fullName").innerText = "Name: " + selectedName;
+    document.getElementById("fullName").innerText = "" + selectedName;
 
     // Generate other random details here based on the country
     document.getElementById("address").innerText = "Address: " + generateRandomAddress();
